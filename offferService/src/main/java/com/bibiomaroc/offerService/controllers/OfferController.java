@@ -1,4 +1,4 @@
-package com.bibiomaroc.offferService.controllers;
+package com.bibiomaroc.offerService.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
