@@ -1,10 +1,10 @@
-package com.bibiomaroc.offferService;
+package com.abdelmajidelayachi.libmaroc.libMaroc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OffferServiceApplicationTests {
+class LibMarocApplicationTests {
 
 	@Test
 	void contextLoads() {
