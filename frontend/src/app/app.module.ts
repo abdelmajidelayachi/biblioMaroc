@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { NavbarAdminComponent } from './shared/components/admin/navbar-admin/navbar-admin.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarAdminComponent,
+    AdminComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

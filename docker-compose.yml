@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    container_name: postgres-libmaroc
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: libmaroc
+    ports:
+      - "5444:5432"
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-libmaroc
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5052:80"
+    depends_on:
+      - db
+networks:
+  bridge:
