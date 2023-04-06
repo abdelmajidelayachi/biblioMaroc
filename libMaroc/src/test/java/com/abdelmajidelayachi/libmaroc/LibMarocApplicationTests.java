@@ -1,4 +1,4 @@
-package com.abdelmajidelayachi.libmaroc.libMaroc;
+package com.abdelmajidelayachi.libmaroc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

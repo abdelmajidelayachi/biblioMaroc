@@ -1,0 +1,150 @@
+<!-- 
+<a href="https://front.codes/" class="logo" target="_blank">
+  <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+</a> -->
+
+
+
+<div class="section body">
+  <div class="container">
+    <div class="row full-height justify-content-center">
+      <div class="col-12 text-center align-self-center py-5">
+        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+          <h6 class="mb-0 pb-3 text-lg"><span>Log In </span><span>Sign Up</span></h6>
+                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                <label for="reg-log">
+                </label>
+          <div class="card-3d-wrap mx-auto">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()" class="card-3d-wrapper">
+              <div class="card-front">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3 text-white">Log In</h4>
+                    <span [hidden]="!loginErrorResponse" class="alert alert-danger alert-custom" role="alert">{{loginErrorResponse}}</span>
+                    <div class="form-group mt-4">
+                      <input type="email" name="logemail" formControlName="loginEmail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                      <i class="input-icon fa-solid fa-at"></i>
+                    </div>	
+                    <!-- show error  -->
+                    <div class="fs-6 italic text-danger text-start" *ngIf="!loginEmail?.valid && (loginEmail?.dirty ||loginEmail?.touched)">
+                      <div [hidden]="!loginEmail?.errors?.['required']">
+                        Email is required
+                        </div>
+                        <div [hidden]="!loginEmail?.errors?.['email']">
+                          Email is not valid.
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" formControlName="loginPassword" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                    </div>
+                    <div class="fs-6 italic text-danger text-start" *ngIf="!loginPassword?.valid && (loginPassword?.dirty ||loginPassword?.touched)">
+                      <div [hidden]="!loginPassword?.errors?.['required']">
+                        Password is required
+                        </div>
+                        <div [hidden]="!loginPassword?.errors?.['minlength']">
+                          Password must be at least 6 characters long.
+                        </div>
+                        <div [hidden]="!loginPassword?.errors?.['maxlength']">
+                          Password cannot be more than 20 characters long.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn mt-4">submit</button>
+                                  <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                      </div>
+                    </div>
+                  </div>
+              <div class="card-back">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()" class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3 text-white">Sign Up</h4>
+                    <span [hidden]="!registerErrorResponse" class="alert alert-danger alert-custom" role="alert">{{registerErrorResponse}}</span>
+                    <div class="form-group mt-4">
+                      <input type="text" formControlName="firstname" name="logFname" class="form-style" placeholder="Your First Name" id="logFname" autocomplete="off">
+                      <i class="input-icon fa-solid fa-user"></i>
+                    </div>
+                    	<!-- show error  -->
+                      <div class="fs-6 italic text-danger text-start" *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)">
+                        <div [hidden]="!firstname?.errors?.['required']">
+                          First Name is required
+                          </div>
+                          <div [hidden]="!firstname?.errors?.['minlength']">
+                            First Name must be at least 3 characters long.
+                          </div>
+                          <div [hidden]="!firstname?.errors?.['maxlength']">
+                            First Name cannot be more than 20 characters long.
+                          </div>
+                      </div>
+
+                    <div class="form-group mt-2">
+                      <input type="text" formControlName="lastname" name="logLname" class="form-style" placeholder="Your Last Name" id="logLname" autocomplete="off">
+                      <i class="input-icon fa-solid fa-user"></i>
+                    </div>	
+                    <div class="fs-6 italic text-danger text-start" *ngIf="!lastname?.valid && (lastname?.dirty ||lastname?.touched)">
+                      <div [hidden]="!lastname?.errors?.['required']">
+                        Last Name is required
+                        </div>
+                        <div [hidden]="!lastname?.errors?.['minlength']">
+                          Last Name must be at least 3 characters long.
+                        </div>
+                        <div [hidden]="!lastname?.errors?.['maxlength']">
+                          Last Name cannot be more than 20 characters long.
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mt-2">
+                      <input type="email"  formControlName="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                      <i class="input-icon fa-solid fa-at"></i>
+                    </div>	
+                    <div class="fs-6 italic text-danger text-start" *ngIf="!email?.valid && (email?.dirty ||email?.touched)">
+                      <div [hidden]="!email?.errors?.['required']">
+                        Email is required
+                        </div>
+                        <div [hidden]="!email?.errors?.['email']">
+                          Email is not valid.
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass"  formControlName="password" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                    </div>
+                    <div class="fs-6 italic text-danger text-start" *ngIf="!password?.valid && (password?.dirty ||password?.touched)">
+                      <div [hidden]="!password?.errors?.['required']">
+                        Password is required
+                        </div>
+                        <div [hidden]="!password?.errors?.['minlength']">
+                          Password must be at least 6 characters long.
+                        </div>
+                        <div [hidden]="!password?.errors?.['maxlength']">
+                          Password cannot be more than 20 characters long.
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" name="logpass"  formControlName="confirmPassword" class="form-style" placeholder="Confirm password" id="logpass" autocomplete="off">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                    </div>
+                    <div class="fs-6 italic text-danger text-start" *ngIf="!confirmPassword?.valid && (confirmPassword?.dirty ||confirmPassword?.touched)">
+                      <div [hidden]="!confirmPassword?.errors?.['required']">
+                        Confirm Password is required
+                        </div>
+                        <div [hidden]="!confirmPassword?.errors?.['minlength']">
+                          Confirm Password must be at least 6 characters long.
+                        </div>
+                        <div [hidden]="!confirmPassword?.errors?.['maxlength']">
+                          Confirm Password cannot be more than 20 characters long.
+                        </div>
+                        <div [hidden]="!confirmPassword?.errors?.['passwordMismatch']">
+                          Confirm Password must be same as password.
+                        </div>
+                        </div>
+                      <button type="submit" class="btn mt-4">submit</button>
+                    </div>
+                    </form>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

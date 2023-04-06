@@ -6,17 +6,49 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { NavbarAdminComponent } from './shared/components/admin/navbar-admin/navbar-admin.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { HomeComponent } from './pages/home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutComponent } from './pages/about/about.component';
+import { CategoryComponent } from './pages/category/category.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { NavbarUserComponent } from './shared/components/user/navbar-user/navbar-user.component';
+import { FooterUserComponent } from './shared/components/user/footer-user/footer-user.component';
+import { CardComponent } from './shared/components/store/card/card.component';
+import { StoreComponent } from './pages/store/store.component';
+import { AuthComponent } from './pages/auth/auth.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarAdminComponent,
+    AdminComponent,
+    HomeComponent,
+    AboutComponent,
+    CategoryComponent,
+    BlogComponent,
+    ContactUsComponent,
+    NavbarUserComponent,
+    FooterUserComponent,
+    CardComponent,
+    StoreComponent,
+    AuthComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
