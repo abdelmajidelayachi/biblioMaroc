@@ -1,6 +1,7 @@
 .product-grid{
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  width: 100% !important;
   transition: all 0.5s;
 }
 .product-grid:hover{ box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3); }
