@@ -5,40 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ce0d97-dda8-43a3-aa07-30609180292f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/dto/requests/UserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/dto/requests/auth/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/dto/requests/auth/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/dto/responses/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/dto/responses/UserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/entities/types/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/exceptions/GlobalExceptionHandlerInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/security/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/security/JWTService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/security/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/web/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/web/ResponseEntityBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libMaroc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/libMaroc/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/controllers/AuthControllerImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/controllers/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/services/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libMaroc/src/main/java/com/abdelmajidelayachi/libmaroc/authentication/services/AuthServiceImp.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,9 +59,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
     "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "C:/Users/YC/OneDrive/Documents/Fill rouge project/application/backend",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+    "git-widget-placeholder": "backend-branch",
+    "last_opened_file_path": "C:/Users/aelayachi/Documents/Youcode/FilRouge/biblioMaroc/backend",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -135,6 +106,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
@@ -167,8 +139,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679425083863</updated>
+      <workItem from="1680773112250" duration="43000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

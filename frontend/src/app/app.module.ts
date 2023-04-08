@@ -21,6 +21,8 @@ import { StoreComponent } from './pages/store/store.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SidebarAdminComponent } from './shared/components/admin/sidebar-admin/sidebar-admin.component';
+import { FooterAdminComponent } from './shared/components/admin/footer-admin/footer-admin.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     CardComponent,
     StoreComponent,
     AuthComponent,
+    SidebarAdminComponent,
+    FooterAdminComponent,
     
   ],
   imports: [

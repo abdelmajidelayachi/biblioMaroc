@@ -10,12 +10,12 @@ services:
     volumes:
       - db_volumes:/var/lib/mysql
     ports:
-      - 3340:3306
+      - "3340:3306"
   phpmyadmin_springboot:
     image: phpmyadmin
     restart: always
     ports:
-      - 8084:80
+      - "8084:80"
     environment:
       - PMA_HOST=db
       - PMA_PORT=3306
