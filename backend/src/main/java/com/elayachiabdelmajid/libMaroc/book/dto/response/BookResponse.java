@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 @Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class BookResponse {
 
     private Long id;
@@ -18,7 +19,9 @@ public class BookResponse {
     private String numberOfPages;
     private String description;
     private String resume;
+    private String[] images;
     private Boolean is_deleted;
-    private Timestamp createdAt;
+    private String createdAt;
+    private String updatedAt;
 
 }

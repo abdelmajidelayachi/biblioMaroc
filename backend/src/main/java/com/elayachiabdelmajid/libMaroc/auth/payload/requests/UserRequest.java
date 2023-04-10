@@ -15,6 +15,4 @@ public class UserRequest {
     private String confirmPassword;
     private String username;
     private String phone;
-    private String adoptedPets;
-    private int numberOfPets;
 }
