@@ -1,0 +1,49 @@
+<div class="container-flud table-container shadow-sm">
+  <div class="table-wrap">
+      <table class="table table-responsive table-borderless">
+          <thead>
+              <th>&nbsp;</th>
+              <th>Books</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>total</th>
+              <th>&nbsp;</th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let book of paginationBooks?.content" class="align-middle alert border-bottom" role="alert">
+                  
+                  <td class="text-center">
+                      <img class="pic"
+                          [src]="book.images[0]"
+                          alt="">
+                  </td>
+                  <td>
+                      <div>
+                          <p class="m-0 fw-bold">{{book.name}}</p>
+                          <p class="m-0 text-muted">{{book.author}}</p>
+                      </div>
+                  </td>
+                  <td>
+                      <div class="fw-600">${{book.price}}</div>
+                  </td>
+                  <td class="d-">
+                      <input class="input" type="text" placeholder="2">
+                  </td>
+                  <td>
+                      {{book.price}}
+                  </td>
+                  <td>
+                    <div class="d-flex gap-3">
+                        <span class="" role="button">
+                            <fa-icon icon="pen-square" size="lg" ></fa-icon>
+                        </span>
+                        <span (click)="handleDeleteBook(book.id)" class="text-danger" role="button">
+                            <fa-icon icon="trash" size="lg"></fa-icon>
+                        </span>
+                    </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

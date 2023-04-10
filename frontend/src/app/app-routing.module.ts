@@ -23,7 +23,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/user/user-routing.module').then(m => m.UserRoutingModule)
   },
   {
-    path: 'management', 
+    path: 'administration', 
     loadChildren: () => import('./pages/admin/admin-routing.module').then(m => m.AdminRoutingModule)
   },
 ];

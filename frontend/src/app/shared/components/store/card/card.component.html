@@ -2,8 +2,8 @@
   <div class="product-grid col-4">
     <div class="product-image">
       <a href="#" class="image">
-        <img class="pic-1" src="assets/images/books/book2_f.jpg" />
-        <img class="pic-2" src="assets/images/books/book2_b.jpg" />
+        <img class="pic-1" [src]="book.images[0]" />
+        <img class="pic-2" [src]="book.images[1]" />
       </a>
       <span class="product-sale-label">sale!</span>
       <ul class="social">
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="product-content">
-      <h3 class="title"><a href="#">Men's Shirt</a></h3>
-      <div class="price"><span>$28.00</span>$20.00</div>
+      <h3 class="title">{{book.name}}</h3>
+      <div class="price"><span>${{(book.price * 1.1).toFixed(2)}}</span>${{book.price.toFixed(2)}}</div>
     </div>
   </div>
