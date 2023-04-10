@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
-import { OfferComponent } from './offer/offer.component';
 import { BooksAdminComponent } from './books-admin/books-admin.component';
 import { UsersComponent } from './users/users.component';
+import { BlogAdminComponent } from './blog-admin/blog-admin.component';
+import { OffersAdminComponent } from './offers-admin/offers-admin.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'management' },
@@ -16,6 +17,11 @@ const routes: Routes = [
       { path: 'users', component: UsersComponent },
     ]
   },
+  { path: 'community', component: AdminComponent, children: [
+    {path: '', pathMatch: 'full', redirectTo:'blogs'},
+    { path: 'blogs', component: BlogAdminComponent },
+    { path: 'offers', component: OffersAdminComponent },
+  ] },
 ];
 
 @NgModule({

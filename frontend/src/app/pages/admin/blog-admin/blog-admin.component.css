@@ -1,0 +1,5 @@
+.blog-container{
+    margin: 0 auto;
+    /* max height screen */
+    height: calc(100vh - 200px);
+}

@@ -13,9 +13,10 @@ import java.util.Map;
 public class CloudinaryProvider {
     public String uploadImage(MultipartFile image) {
         Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
-                "cloud_name", "mypet-api-images",
+                "cloud_name", "biblomaroc",
                 "api_key", "518363599358565",
-                "api_secret", "3sJ6Epq65yIYYWq2_p4hYqk7b_U"));
+                "api_secret", "3sJ6Epq65yIYYWq2_p4hYqk7b_U"
+        ));
 
         Map uploadResult;
         try {
