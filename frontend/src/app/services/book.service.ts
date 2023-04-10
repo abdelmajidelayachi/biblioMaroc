@@ -14,6 +14,10 @@ export class BookService {
     return this.http.get<PaginationBookModel>(endpoints.booksPagination(page, size))
   }
 
+  saveBook(formData: FormData) {
+    return this.http.post(endpoints.books, formData);
+  }
+
   deleteBook(id: number) {
     console.log(id);
     console.log('deleteBook', endpoints.deleteBook(id));

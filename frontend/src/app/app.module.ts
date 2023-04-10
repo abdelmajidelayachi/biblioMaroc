@@ -25,6 +25,10 @@ import { SidebarAdminComponent } from './shared/components/admin/sidebar-admin/s
 import { FooterAdminComponent } from './shared/components/admin/footer-admin/footer-admin.component';
 import { BooksAdminComponent } from './pages/admin/books-admin/books-admin.component';
 import { UsersComponent } from './pages/admin/users/users.component';
+import { AddBookComponent } from './shared/components/modals/add-book/add-book.component';
+import { FileUploadModule } from '@iplab/ngx-file-upload';
+import { PostComponent } from './shared/components/post/post.component';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +49,9 @@ import { UsersComponent } from './pages/admin/users/users.component';
     FooterAdminComponent,
     BooksAdminComponent,
     UsersComponent,
-    CardComponent
+    CardComponent,
+    AddBookComponent,
+    PostComponent
     
   ],
   imports: [
@@ -57,7 +63,8 @@ import { UsersComponent } from './pages/admin/users/users.component';
     HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

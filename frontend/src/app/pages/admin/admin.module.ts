@@ -10,7 +10,6 @@ import { NavbarAdminComponent } from 'src/app/shared/components/admin/navbar-adm
 @NgModule({
   declarations: [
     AdminComponent,
-    NavbarAdminComponent,
     OfferComponent
   ],
   imports: [
@@ -18,8 +17,7 @@ import { NavbarAdminComponent } from 'src/app/shared/components/admin/navbar-adm
     AdminRoutingModule
   ],
   exports:[
-    AdminComponent,
-    NavbarAdminComponent
+    AdminComponent
   ]
 })
 export class AdminModule { }
