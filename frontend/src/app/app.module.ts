@@ -28,6 +28,9 @@ import { UsersComponent } from './pages/admin/users/users.component';
 import { AddBookComponent } from './shared/components/modals/add-book/add-book.component';
 import { FileUploadModule } from '@iplab/ngx-file-upload';
 import { PostComponent } from './shared/components/post/post.component';
+import { BlogAdminComponent } from './pages/admin/blog-admin/blog-admin.component';
+import { OffersAdminComponent } from './pages/admin/offers-admin/offers-admin.component';
+import { OfferCardComponent } from './shared/components/store/offer-card/offer-card.component';
 
 
 @NgModule({
@@ -51,7 +54,11 @@ import { PostComponent } from './shared/components/post/post.component';
     UsersComponent,
     CardComponent,
     AddBookComponent,
-    PostComponent
+    PostComponent,
+    BlogAdminComponent,
+    BlogAdminComponent,
+    OffersAdminComponent,
+    OfferCardComponent
     
   ],
   imports: [
