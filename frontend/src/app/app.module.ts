@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarAdminComponent } from './shared/components/admin/sidebar-admin/sidebar-admin.component';
 import { FooterAdminComponent } from './shared/components/admin/footer-admin/footer-admin.component';
+import { BooksAdminComponent } from './pages/admin/books-admin/books-admin.component';
+import { UsersComponent } from './pages/admin/users/users.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,9 @@ import { FooterAdminComponent } from './shared/components/admin/footer-admin/foo
     AuthComponent,
     SidebarAdminComponent,
     FooterAdminComponent,
+    BooksAdminComponent,
+    UsersComponent,
+    CardComponent
     
   ],
   imports: [

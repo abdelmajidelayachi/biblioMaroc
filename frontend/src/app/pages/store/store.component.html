@@ -11,15 +11,7 @@
   <br>
   <div class="container">
       <div class="wrapper">
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
+      <app-card *ngFor="let book of paginationBooks?.content" [book]="book"></app-card>
     </div>
   </div>
  <br>
