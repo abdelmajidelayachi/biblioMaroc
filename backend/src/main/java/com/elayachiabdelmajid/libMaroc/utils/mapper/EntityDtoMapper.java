@@ -1,6 +1,10 @@
 package com.elayachiabdelmajid.libMaroc.utils.mapper;
 
+import com.elayachiabdelmajid.libMaroc.book.dto.response.PaginationResponse;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+
+import java.util.stream.Collectors;
 
 public class EntityDtoMapper {
 
@@ -14,5 +18,9 @@ public class EntityDtoMapper {
         return mapper.map(dto, entityClass);
     }
 
+    public static <D, E> PaginationResponse<D> toDtoPageable(Page<E> entityPage, Class<D> dtoClass) {
+        return new PaginationResponse<>(entityPage.getTotalPages(), entityPage.getContent().stream().map(entity -> toDto(entity, dtoClass)).collect(Collectors.toList()),
+                entityPage.getTotalElements(), entityPage.getSize(), entityPage.getNumberOfElements());
+    }
 }
 

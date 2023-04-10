@@ -3,6 +3,8 @@ package com.elayachiabdelmajid.libMaroc.book.services;
 
 import com.elayachiabdelmajid.libMaroc.book.dto.request.BookRequest;
 import com.elayachiabdelmajid.libMaroc.book.dto.response.BookResponse;
+import com.elayachiabdelmajid.libMaroc.book.dto.response.PaginationResponse;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -13,5 +15,7 @@ public interface BookService {
 
     void updateBook(BookRequest bookRequest, Long idBook);
 
-    void deleteBook();
+    void deleteBook(Long idBook);
+
+    PaginationResponse<BookResponse>  getPageBooks(int page, int size) ;
 }

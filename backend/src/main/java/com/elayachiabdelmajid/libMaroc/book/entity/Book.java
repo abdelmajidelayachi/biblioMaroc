@@ -4,14 +4,15 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "books")
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -25,7 +26,7 @@ public class Book {
 
     private Double price;
 
-    private String numberOfPages;
+    private int numberOfPages;
 
     private String description;
 
@@ -33,7 +34,13 @@ public class Book {
 
     private String[] images;
 
-    @Column(name="create_at", insertable = false, updatable = false)
-    private Timestamp createdAt;
+    @Column(name="is_deleted", columnDefinition = "boolean default false")
+    private Boolean isDeleted = false;
+
+    @Column(name = "created_at", updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private String createdAt;
+
+    @Column(name = "updated_at", updatable = false , insertable = false ,columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+    private String updated_at;
 
 }

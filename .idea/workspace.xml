@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ce0d97-dda8-43a3-aa07-30609180292f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/controllers/UserControllerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/controllers/UserControllerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/payload/requests/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/payload/requests/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/payload/responses/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/payload/responses/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/repositories/UserPaginationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/repositories/UserPaginationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/services/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/auth/services/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/controllers/BookControllerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/controllers/BookControllerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/dto/request/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/dto/request/BookRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/dto/response/BookResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/dto/response/BookResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/dto/response/PaginationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/dto/response/PaginationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/repository/BookPaginationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/repository/BookPaginationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/services/BookServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/book/services/BookServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/provider/CloudinaryProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/provider/CloudinaryProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/utils/mapper/EntityDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/elayachiabdelmajid/libMaroc/utils/mapper/EntityDtoMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +70,24 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NKuPxTSdrs1EIRAro1X1QKi814" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "backend-branch",
-    "last_opened_file_path": "C:/Users/aelayachi/Documents/Youcode/FilRouge/biblioMaroc/backend",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend-branch&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aelayachi/Documents/Youcode/FilRouge/biblioMaroc/backend&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\YC\OneDrive\Documents\Fill rouge project\application\libMaroc\src\main\java\com\abdelmajidelayachi\libmaroc" />
@@ -106,7 +127,6 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
@@ -140,6 +160,8 @@
       <option name="presentableId" value="Default" />
       <updated>1679425083863</updated>
       <workItem from="1680773112250" duration="43000" />
+      <workItem from="1681039776840" duration="13000" />
+      <workItem from="1681117677868" duration="7000" />
     </task>
     <servers />
   </component>
