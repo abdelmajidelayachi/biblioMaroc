@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { NavbarAdminComponent } from './shared/components/admin/navbar-admin/navbar-admin.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -20,7 +18,7 @@ import { CardComponent } from './shared/components/store/card/card.component';
 import { StoreComponent } from './pages/store/store.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { SidebarAdminComponent } from './shared/components/admin/sidebar-admin/sidebar-admin.component';
 import { FooterAdminComponent } from './shared/components/admin/footer-admin/footer-admin.component';
 import { BooksAdminComponent } from './pages/admin/books-admin/books-admin.component';
@@ -31,7 +29,12 @@ import { PostComponent } from './shared/components/post/post.component';
 import { BlogAdminComponent } from './pages/admin/blog-admin/blog-admin.component';
 import { OffersAdminComponent } from './pages/admin/offers-admin/offers-admin.component';
 import { OfferCardComponent } from './shared/components/store/offer-card/offer-card.component';
-
+import { LoaderComponent } from './shared/components/loader/loader.component';
+import { MaterialComponentModule } from './core/modules/material-component.module';
+import { AddPostComponent } from './shared/components/add-post/add-post.component';
+import { HeaderInterceptor } from './core/interceptors/header.interceptor';
+import { ErrorInterceptor } from './core/interceptors/error.interceptor';
+import { AlertComponent } from './shared/components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -58,22 +61,26 @@ import { OfferCardComponent } from './shared/components/store/offer-card/offer-c
     BlogAdminComponent,
     BlogAdminComponent,
     OffersAdminComponent,
-    OfferCardComponent
+    OfferCardComponent,
+    LoaderComponent,
+    AddPostComponent,
+    AlertComponent
     
   ],
   imports: [
     BrowserModule,
+    MaterialComponentModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatToolbarModule,
-    MatButtonModule,
     FontAwesomeModule,
     FileUploadModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

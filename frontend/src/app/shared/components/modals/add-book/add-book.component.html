@@ -6,7 +6,8 @@
 <!-- Modal -->
 <div
   class="modal fade"
-  id="addBook" #addBook
+  id="addBook"
+  #addBook
   tabindex="-1"
   aria-labelledby="addBookLabel"
   aria-hidden="true"
@@ -18,7 +19,7 @@
       class="modal-content"
     >
       <div class="modal-header">
-        <h5 class="modal-title" id="addBookLabel">Modal title</h5>
+        <h5 class="modal-title" id="addBookLabel">ADD BOOK</h5>
         <button
           type="button"
           class="btn-close"
@@ -28,128 +29,239 @@
       </div>
       <div class="modal-body gap-4">
         <div class="row mb-4">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <!-- <label for="name">Name</label> -->
-              <input
-                formControlName="name"
-                class="form-control"
-                type="text"
-                placeholder="Name"
-              />
-            </div>
-            <div
-              *ngIf="name?.invalid && (name?.dirty || name?.touched)"
-              class="fs-6 italic text-danger text-start"
-            >
-              <div *ngIf="name?.errors?.['required']">Name is required</div>
-              <div *ngIf="name?.errors?.['minlength']">
-                Name must be at least 3 characters long.
-              </div>
-              <div *ngIf="name?.errors?.['maxlength']">
-                Name cannot be more than 50 characters long.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mb-4">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <div class="input-group">
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <!-- <label for="name">Name</label> -->
                 <input
-                  class="form-control"
-                  formControlName="author"
-                  type="text"
-                  placeholder="author"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            *ngIf="author?.invalid && (author?.dirty || author?.touched)"
-            class="fs-6 italic text-danger text-start"
-          >
-            <div *ngIf="author?.errors?.['required']">Author is required</div>
-            <div *ngIf="author?.errors?.['minlength']">
-              Author must be at least 3 characters long.
-            </div>
-            <div *ngIf="author?.errors?.['maxlength']">
-              Author cannot be more than 50 characters long.
-            </div>
-          </div>
-        </div>
-        <div class="row mb-4">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <div class="input-group">
-                <input
-                  formControlName="owner"
+                  formControlName="name"
                   class="form-control"
                   type="text"
-                  placeholder="Owner"
+                  placeholder="Name"
                 />
               </div>
-            </div>
-            <div
-              *ngIf="owner?.invalid && (owner?.dirty || owner?.touched)"
-              class="fs-6 italic text-danger text-start"
-            >
-              <div *ngIf="owner?.errors?.['required']">Owner is required</div>
-              <div *ngIf="owner?.errors?.['minlength']">
-                Owner must be at least 3 characters long.
+              <div
+                *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+                class="fs-6 italic text-danger text-start"
+              >
+                <div *ngIf="name?.errors?.['required']">Name is required</div>
+                <div *ngIf="name?.errors?.['minlength']">
+                  Name must be at least 3 characters long.
+                </div>
+                <div *ngIf="name?.errors?.['maxlength']">
+                  Name cannot be more than 50 characters long.
+                </div>
               </div>
-              <div *ngIf="owner?.errors?.['maxlength']">
-                Owner cannot be more than 50 characters long.
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    formControlName="author"
+                    type="text"
+                    placeholder="author"
+                  />
+                </div>
+              </div>
+              <div
+                *ngIf="author?.invalid && (author?.dirty || author?.touched)"
+                class="fs-6 italic text-danger text-start"
+              >
+                <div *ngIf="author?.errors?.['required']">
+                  Author is required
+                </div>
+                <div *ngIf="author?.errors?.['minlength']">
+                  Author must be at least 3 characters long.
+                </div>
+                <div *ngIf="author?.errors?.['maxlength']">
+                  Author cannot be more than 50 characters long.
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="row mb-4">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <div class="input-group">
-                <input
-                  formControlName="price"
-                  class="form-control"
-                  type="number"
-                  placeholder="price"
-                />
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    formControlName="owner"
+                    class="form-control"
+                    type="text"
+                    placeholder="Owner"
+                  />
+                </div>
+              </div>
+              <div
+                *ngIf="owner?.invalid && (owner?.dirty || owner?.touched)"
+                class="fs-6 italic text-danger text-start"
+              >
+                <div *ngIf="owner?.errors?.['required']">Owner is required</div>
+                <div *ngIf="owner?.errors?.['minlength']">
+                  Owner must be at least 3 characters long.
+                </div>
+                <div *ngIf="owner?.errors?.['maxlength']">
+                  Owner cannot be more than 50 characters long.
+                </div>
               </div>
             </div>
-            <div
-              *ngIf="price?.invalid && (price?.dirty || price?.touched)"
-              class="fs-6 italic text-danger text-start"
-            >
-              <div *ngIf="price?.errors?.['required']">Price is required</div>
-              <div *ngIf="price?.errors?.['min']">
-                Price must be at least 0.
+          </div>
+
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    formControlName="price"
+                    class="form-control"
+                    type="number"
+                    placeholder="price"
+                  />
+                </div>
               </div>
-              <div *ngIf="price?.errors?.['max']">
-                Price cannot be more than 1000.
+              <div
+                *ngIf="price?.invalid && (price?.dirty || price?.touched)"
+                class="fs-6 italic text-danger text-start"
+              >
+                <div *ngIf="price?.errors?.['required']">Price is required</div>
+                <div *ngIf="price?.errors?.['min']">
+                  Price must be at least 0.
+                </div>
+                <div *ngIf="price?.errors?.['max']">
+                  Price cannot be more than 1000.
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="row mb-4">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <div class="input-group">
-                <input
-                  formControlName="numberOfPages"
-                  class="form-control"
-                  type="number"
-                  placeholder="Number of pages"
-                />
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    formControlName="numberOfPages"
+                    class="form-control"
+                    type="number"
+                    placeholder="Number of pages"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              *ngIf="
+                numberOfPages?.invalid &&
+                (numberOfPages?.dirty || numberOfPages?.touched)
+              "
+              class="fs-6 italic text-danger text-start"
+            >
+              <div *ngIf="numberOfPages?.errors?.['required']">
+                Number of pages is required
+              </div>
+              <div *ngIf="numberOfPages?.errors?.['min']">
+                Number of pages must be at least 0.
+              </div>
+              <div *ngIf="numberOfPages?.errors?.['max']">
+                Number of pages cannot be more than 1000.
               </div>
             </div>
           </div>
-          <div *ngIf="numberOfPages?.invalid && (numberOfPages?.dirty || numberOfPages?.touched)" class="fs-6 italic text-danger text-start">
-            <div *ngIf="numberOfPages?.errors?.['required']">Number of pages is required</div>
-            <div *ngIf="numberOfPages?.errors?.['min']">
-              Number of pages must be at least 0.
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    formControlName="quantity"
+                    class="form-control"
+                    type="number"
+                    placeholder="Quantity"
+                  />
+                </div>
+                <div
+                  *ngIf="
+                    quantity?.invalid && (quantity?.dirty || quantity?.touched)
+                  "
+                  class="fs-6 italic text-danger text-start"
+                >
+                  <div *ngIf="quantity?.errors?.['required']">
+                    Quantity is required
+                  </div>
+                  <div *ngIf="quantity?.errors?.['min']">
+                    Quantity must be at least 1.
+                  </div>
+                  <div *ngIf="quantity?.errors?.['max']">
+                    Quantity cannot be more than 1000.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div *ngIf="numberOfPages?.errors?.['max']">
-              Number of pages cannot be more than 1000.
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                  <select
+                    formControlName="category"
+                    type="text"
+                    class="form-select text-dark"
+                    placeholder="Category"
+                    [selectedIndex]="0"
+                  >
+                    <option selected disabled>Select Category</option>
+                    <option
+                      *ngFor="let category of category"
+                      [value]="category"
+                    >
+                      {{ category }}
+                    </option>
+                  </select>
+                <div
+                  *ngIf="
+                    categoryValue?.invalid &&
+                    (categoryValue?.dirty || categoryValue?.touched)
+                  "
+                  class="fs-6 italic text-danger text-start"
+                >
+                  <div *ngIf="categoryValue?.errors?.['required']">
+                    Category is required
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    formControlName="discount"
+                    class="form-control"
+                    type="number"
+                    placeholder="Discount %"
+                  />
+                </div>
+              </div>
+              <div
+                *ngIf="
+                  discount?.invalid && (discount?.dirty || discount?.touched)
+                "
+                class="fs-6 italic text-danger text-start"
+              >
+                <div *ngIf="discount?.errors?.['required']">
+                  Discount is required
+                </div>
+                <div *ngIf="discount?.errors?.['min']">
+                  Discount must be at least 0.
+                </div>
+                <div *ngIf="discount?.errors?.['max']">
+                  Discount cannot be more than 100.
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -167,15 +279,23 @@
               </div>
             </div>
           </div>
-          <div *ngIf="description?.invalid && (description?.dirty || description?.touched)" class="fs-6 italic text-danger text-start">
-            <div *ngIf="description?.errors?.['required']">Description is required</div>
+          <div
+            *ngIf="
+              description?.invalid &&
+              (description?.dirty || description?.touched)
+            "
+            class="fs-6 italic text-danger text-start"
+          >
+            <div *ngIf="description?.errors?.['required']">
+              Description is required
+            </div>
             <div *ngIf="description?.errors?.['minlength']">
               Description must be at least 3 characters long.
             </div>
             <div *ngIf="description?.errors?.['maxlength']">
               Description cannot be more than 50 characters long.
             </div>
-            </div>
+          </div>
         </div>
         <div class="row mb-4">
           <div class="col-sm-12">
@@ -189,27 +309,44 @@
                   placeholder="resume"
                 ></textarea>
               </div>
-              <div *ngIf="resume?.invalid && (resume?.dirty || resume?.touched)" class="fs-6 italic text-danger text-start">
-                <div *ngIf="resume?.errors?.['required']">Resume is required</div>
+              <div
+                *ngIf="resume?.invalid && (resume?.dirty || resume?.touched)"
+                class="fs-6 italic text-danger text-start"
+              >
+                <div *ngIf="resume?.errors?.['required']">
+                  Resume is required
+                </div>
                 <div *ngIf="resume?.errors?.['minlength']">
                   Resume must be at least 3 characters long.
                 </div>
                 <div *ngIf="resume?.errors?.['maxlength']">
                   Resume cannot be more than 50 characters long.
                 </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="row mb-4">
-          <file-upload formControlName="images" multiple animation></file-upload>
-          <div *ngIf="images?.invalid && (images?.dirty || images?.touched)" class="fs-6 italic text-danger text-start">
+          <file-upload
+            formControlName="images"
+            multiple
+            animation
+          ></file-upload>
+          <div
+            *ngIf="images?.invalid && (images?.dirty || images?.touched)"
+            class="fs-6 italic text-danger text-start"
+          >
             <div *ngIf="images?.errors?.['required']">Images is required</div>
-            </div>
+          </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" #btnCloseAddBook class="btn btn-secondary" data-bs-dismiss="modal">
+        <button
+          type="button"
+          #btnCloseAddBook
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
           Dismiss
         </button>
         <button type="submit" class="btn btn-primary">Save Book</button>

@@ -5,9 +5,10 @@ import com.elayachiabdelmajid.libMaroc.book.dto.request.BookRequest;
 import com.elayachiabdelmajid.libMaroc.book.dto.response.BookResponse;
 import com.elayachiabdelmajid.libMaroc.book.dto.response.PaginationResponse;
 import com.elayachiabdelmajid.libMaroc.book.entity.Book;
+import com.elayachiabdelmajid.libMaroc.book.entity.Category;
 import com.elayachiabdelmajid.libMaroc.book.repository.BookPaginationRepository;
 import com.elayachiabdelmajid.libMaroc.book.repository.BookRepository;
-import com.elayachiabdelmajid.libMaroc.provider.CloudinaryProvider;
+import com.elayachiabdelmajid.libMaroc.globals.services.ImageUploadService;
 import com.elayachiabdelmajid.libMaroc.utils.mapper.EntityDtoMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
@@ -21,12 +22,12 @@ import java.util.stream.Collectors;
 public class BookServiceImp implements BookService{
 
     private final BookRepository bookRepository;
-    private final CloudinaryProvider cloudinaryProvider;
+    private final ImageUploadService imageUploadService;;
     private final BookPaginationRepository bookPaginationRepository;
 
-    public BookServiceImp(BookRepository bookRepository, CloudinaryProvider cloudinaryProvider, BookPaginationRepository bookPaginationRepository) {
+    public BookServiceImp(BookRepository bookRepository, ImageUploadService imageUploadService, BookPaginationRepository bookPaginationRepository) {
         this.bookRepository = bookRepository;
-        this.cloudinaryProvider = cloudinaryProvider;
+        this.imageUploadService = imageUploadService;
         this.bookPaginationRepository = bookPaginationRepository;
     }
 
@@ -37,20 +38,14 @@ public class BookServiceImp implements BookService{
     @Override
     public void saveBook(BookRequest bookRequest) {
         MultipartFile[] images = bookRequest.getImages();
-        String[] urls = storeImageInCloud(images);
+        String[] urls = imageUploadService.storeImageInCloud(images);
         Book book = EntityDtoMapper.toEntity(bookRequest, Book.class);
         book.setImages(urls);
+        if(bookRequest.getCategory() != null) book.setCategory(Category.valueOf(bookRequest.getCategory()));
+        else book.setCategory(Category.OTHERS);
         bookRepository.save(book);
     }
 
-    private String[] storeImageInCloud(MultipartFile[] images) {
-        String[] urls = new String[images.length];
-        for (int i = 0; i < images.length; i++) {
-            System.out.println(images[i].getOriginalFilename());
-            urls[i] = cloudinaryProvider.uploadImage(images[i]);
-        }
-        return urls;
-    }
 
 
     @Transactional

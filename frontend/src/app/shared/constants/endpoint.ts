@@ -8,4 +8,7 @@ export const endpoints = {
   booksPagination: (page: number, size: number) => `${baseUrl}/books/${page}/${size}`,
   deleteBook: (id: number) => `${baseUrl}/books/${id}`,
   usersPagination: (page: number, size: number) => `${baseUrl}/users/${page}/${size}`,
+  // blogs
+  blogs: `${baseUrl}/blogs`,
+  blogsPagination: (page: number, size: number) => `${baseUrl}/blogs/${page}/${size}`,
 }

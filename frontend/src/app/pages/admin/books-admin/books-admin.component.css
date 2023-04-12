@@ -9,6 +9,7 @@
     background: #f5f5f5;
     font-family: 'Varela Round', sans-serif;
     font-size: 13px;
+    height : calc(100vh - 200px);
   }
   
   .table-responsive {
@@ -117,8 +118,9 @@
     color: #2c2f31;
   }
   
-  table.table td a.delete {
+  table.table td span.delete {
     color: #F44336;
+    cursor: pointer;
   }
   
   table.table td i {

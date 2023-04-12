@@ -32,10 +32,11 @@
 }
 .product-grid:hover .product-image .pic-2{ opacity: 1; }
 .product-grid .product-sale-label{
-  color: #fff;
-  background: #6da84a;
+  color: #111 ;
+  background: #fff700;
   font-size: 14px;
   font-style: italic;
+  font-weight: 600;
   text-transform: uppercase;
   width: 55px;
   height: 55px;

@@ -1,9 +1,8 @@
 package com.elayachiabdelmajid.libMaroc.book.dto.request;
 
+import com.elayachiabdelmajid.libMaroc.book.entity.Category;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.sql.Timestamp;
 
 @Getter
 @Setter
@@ -16,6 +15,10 @@ public class BookRequest  {
     private Double price;
     private int numberOfPages;
     private String description;
+    private int discountPercentage;
+
+    private Double quantity;
+    private String category;
 
     MultipartFile[] images;
     private String resume;
