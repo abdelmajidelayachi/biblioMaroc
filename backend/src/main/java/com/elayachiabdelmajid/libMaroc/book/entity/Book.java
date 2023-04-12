@@ -26,7 +26,13 @@ public class Book {
 
     private Double price;
 
-    private int numberOfPages;
+    private Double quantity;
+
+    private Integer discountPercentage;
+
+    private Category category;
+
+    private Integer numberOfPages;
 
     private String description;
 

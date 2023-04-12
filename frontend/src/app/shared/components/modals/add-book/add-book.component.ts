@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FileUploadValidators } from '@iplab/ngx-file-upload';
 import { BookService } from 'src/app/services/book.service';
@@ -12,8 +12,20 @@ import { BookService } from 'src/app/services/book.service';
 export class AddBookComponent {
   @ViewChild('btnCloseAddBook') addBook: ElementRef | undefined;
 
-   private filesControl: File[] = [];
+  @Output() savedBooked = new EventEmitter<boolean>();
+
    bookForm !: FormGroup;
+
+   category = [
+    "TEXT_BOOKS",
+    "SCIENCES",
+    "HISTORY",
+    "BIOGRAPHY",
+    "ADVENTURE",
+    "FANTASY",
+    "OTHERS",
+   ];
+
    constructor (private formBuilder: FormBuilder, private bookService: BookService) {
 
     this.bookForm = this.formBuilder.group({
@@ -23,8 +35,11 @@ export class AddBookComponent {
       price: ['', [Validators.required, Validators.pattern('^[0-9]+(\.[0-9]{1,2})?$')]],
       numberOfPages: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       description: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(500)]],
-      images: new FormControl(null, [Validators.required, FileUploadValidators.filesLimit(3)]),
+      images: new FormControl(null, [Validators.required, FileUploadValidators.filesLimit(2)]),
       resume: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(500)]],
+      category: ['', [Validators.required]],
+      quantity: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      discount: ['', [Validators.required, Validators.pattern('^[0-9]+(\.[0-9]{1,2})?$')]],
     })
 
    }
@@ -37,6 +52,10 @@ export class AddBookComponent {
     get description() { return this.bookForm.get('description'); }
     get images() { return this.bookForm.get('images'); }
     get resume() { return this.bookForm.get('resume'); }
+    get quantity() { return this.bookForm.get('quantity'); }
+    get discount() { return this.bookForm.get('discount'); }
+
+    get categoryValue () { return this.bookForm.get('category'); }
 
     onSubmitSaveBook() {
       console.log(this.bookForm.value);
@@ -53,21 +72,33 @@ export class AddBookComponent {
       data.append('numberOfPages', this.numberOfPages?.value);
       data.append('description', this.description?.value);
       data.append('resume', this.resume?.value);
-      for (let i = 0; i < this.filesControl.length; i++) {
-        data.append('images', this.filesControl[i]);
-      }
+      data.append('category', this.categoryValue?.value);
+      data.append('quantity', this.quantity?.value);
+      data.append('discountPercentage', this.discount?.value);
+      
+     for (const image of this.images?.value) {
+      data.append('images', image);
+      console.log(image)
+     }
+     console.log(this.discount?.value)
+     
       this.bookService.saveBook(data).subscribe(
         (response) => {
           this.bookForm.reset();
-          if(this.addBook)
-          this.addBook.nativeElement.click();
+
+          if(this.addBook){
+            this.addBook.nativeElement.click();
+          }
+          this.savedBooked.emit(true);
+
         },
         (error) => {
           console.log(error);
-          if(this.addBook)
-          this.addBook.nativeElement.click();
         }
       )
-
     }
+
+
+
+
 }

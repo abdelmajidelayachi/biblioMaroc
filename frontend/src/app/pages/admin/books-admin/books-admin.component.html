@@ -1,5 +1,5 @@
-<app-add-book></app-add-book>
-<div class="body">
+<app-add-book (savedBooked)="handleSavedBooked($event)"></app-add-book>
+<div class="body"  *ngIf="(paginationBook$|async) as asyncBooks; else loading">
     <div class="container-xl">
       <div class="table-responsive">
         <div class="table-wrapper">
@@ -13,10 +13,6 @@
                   ><i class="material-icons">&#xE147;</i>
                   <span>Add New Book</span></button
                 >
-                <a href="#" class="btn btn-secondary"
-                  ><i class="material-icons">&#xE24D;</i>
-                  <span>Export to Excel</span></a
-                >
               </div>
             </div>
           </div>
@@ -26,17 +22,18 @@
                 <th>&nbsp;</th>
                 <th>Books</th>
                 <th>Price</th>
+                <th>Discount</th>
                 <th>Quantity</th>
                 <th>total</th>
                 <th>&nbsp;</th>
               </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let book of paginationBooks?.content" class="align-middle alert border-bottom" role="alert">
+                <tr *ngFor="let book of asyncBooks.content" class="align-middle alert border-bottom" role="alert">
                   
                     <td class="text-center">
                         <img class="pic"
-                            src="https://res.cloudinary.com/biblomaroc/image/upload/v1680996879/n3tyuia6lqi6sxzejg3f.jpg"
+                            [src]="book.images[0]"
                             alt="">
                     </td>
                     <td>
@@ -48,11 +45,14 @@
                     <td>
                         <div class="fw-600">${{book.price}}</div>
                     </td>
+                    <td>
+                      {{book.discountPercentage}}
+                    </td>
                     <td class="d-">
-                        <input class="input" type="text" placeholder="2">
+                        <span class="">{{book.quantity}}</span>
                     </td>
                     <td>
-                        {{book.price}}
+                        ${{book.price * book.quantity - book.price * book.quantity * book.discountPercentage / 100}}
                     </td>
                 <td><span class="status text-success">&bull;</span> Active</td>
                 <td>
@@ -63,17 +63,17 @@
                     data-toggle="tooltip"
                     ><i class="material-icons">&#xE8B8;</i></a
                   >
-                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"
-                    ><i class="material-icons">&#xE5C9;</i></a
+                  <span (click)="handleDeleteBook(book.id)" class="delete" title="Delete" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE5C9;</i></span
                   >
                 </td>
               </tr>
             </tbody>
           </table>
-          <div class="clearfix">
-            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+          <!-- <div class="clearfix">
+            <div class="hint-text">Showing <b>{{asyncBooks.numberOfElements}}</b> out of <b>{{asyncBooks.totalElements}}</b> entries</div>
             <ul class="pagination">
-              <li class="page-item disabled"><a href="#">Previous</a></li>
+              <li class="page-item" [class.disabled]="currentPage===0"  ><button>Previous</button></li>
               <li class="page-item"><a href="#" class="page-link">1</a></li>
               <li class="page-item"><a href="#" class="page-link">2</a></li>
               <li class="page-item active">
@@ -83,9 +83,14 @@
               <li class="page-item"><a href="#" class="page-link">5</a></li>
               <li class="page-item"><a href="#" class="page-link">Next</a></li>
             </ul>
-          </div>
+          </div> -->
+          <mat-paginator #paginator [length]="asyncBooks.totalElements" [pageSize]="asyncBooks.size" [pageSizeOptions]="[2,5, 10, 25, 100]" 
+          (page)="handlePage($event)"
+          pageIndex="{{currentPage}}"
+          showFirstLastButtons
+          ></mat-paginator>
         </div>
       </div>
     </div>
   </div>
-  
+  <ng-template #loading><app-loader></app-loader></ng-template>

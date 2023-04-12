@@ -7,10 +7,14 @@ export interface BookModel {
   numberOfPages: number;
   description: string;
   resume: string;
+  discountPercentage: number;
+  quantity: number;
+  category: string;
   images: string[];
   is_deleted: boolean;
   createdAt: string;
   updatedAt: string;
+  
 }
 
 
